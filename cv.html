@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luc-Emmanuel Koffi | CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(2, 8, 24, 0.37);
+        }
+        
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-icon:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+        }
+        
+        .timeline-line {
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to bottom, #38bdf8, #818cf8);
+            top: 12px;
+            bottom: 0;
+            left: 6px;
+        }
+
+        .print-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        @media print {
+            .print-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8 max-w-5xl">
+        <!-- Header -->
+        <header class="glass-card p-8 mb-8 rounded-2xl">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-sky-400/20">
+                    <img src="https://mvnuel-dev.netlify.app/assets/profle-CPcw1I8i.jpg" alt="Luc-Emmanuel Koffi" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-1 text-center md:text-left">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-2">Luc-Emmanuel <span class="gradient-text">Koffi</span></h1>
+                    <h2 class="text-xl md:text-2xl mb-3 text-slate-300">Développeur Junior</h2>
+                    <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+                        <div class="flex items-center gap-2 text-sm">
+                            <i class="fas fa-map-marker-alt text-sky-400"></i>
+                            <span>Abidjan, Cocody</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm">
+                            <i class="fas fa-envelope text-sky-400"></i>
+                            <span>luckemmanuel09@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm">
+                            <i class="fas fa-phone-alt text-sky-400"></i>
+                            <span>+225 07 1076-2494</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex gap-3 justify-center md:justify-start">
+                        <a href="https://www.linkedin.com/in/luc-emmanuel-koffi-a32a92301/" class="glass-card hover:bg-slate-800/50 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/mvnuel9" class="glass-card hover:bg-slate-800/50 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://codepen.io/mvnuel9" class="glass-card hover:bg-slate-800/50 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-codepen"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Column -->
+            <div class="lg:col-span-1 space-y-8">
+                <!-- Profile -->
+                <section class="glass-card p-6 rounded-2xl">
+                    <h2 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-user-circle mr-3 text-sky-400"></i>
+                        Profil
+                    </h2>
+                    <p class="text-slate-300">
+                        Développeur junior passionné par la création d'applications web et mobiles innovantes. 
+                        Motivé à intégrer une équipe dynamique où je pourrai contribuer à construire des solutions 
+                        prêtes à l'emploi tout en continuant à développer mes compétences techniques.
+                    </p>
+                </section>
+
+                <!-- Education -->
+                <section class="glass-card p-6 rounded-2xl">
+                    <h2 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-graduation-cap mr-3 text-sky-400"></i>
+                        Formation
+                    </h2>
+                    <div class="relative pl-6 pb-1">
+                        <div class="timeline-dot absolute left-0 top-2"></div>
+                        <div class="timeline-line"></div>
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-bold">Master en ingénierie logiciel</h3>
+                                <span class="text-sky-400 text-sm">Présent</span>
+                            </div>
+                            <p class="text-slate-400 text-sm">Institut Supérieur Polytechnique d'Afrique</p>
+                        </div>
+                    </div>
+                    <div class="relative pl-6 pb-1">
+                        <div class="timeline-dot absolute left-0 top-2"></div>
+                        <div class="timeline-line"></div>
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-bold">Licence en Informatique</h3>
+                                <span class="text-sky-400 text-sm">2024</span>
+                            </div>
+                            <p class="text-slate-400 text-sm">Université Internationale des Sciences et Technologies</p>
+                        </div>
+                    </div>
+                    <div class="relative pl-6">
+                        <div class="timeline-dot absolute left-0 top-2"></div>
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-bold">Baccalauréat</h3>
+                                <span class="text-sky-400 text-sm">2021</span>
+                            </div>
+                            <p class="text-slate-400 text-sm">Collège Sainte Camille</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Languages & Certifications -->
+                <section class="glass-card p-6 rounded-2xl">
+                    <h2 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-globe mr-3 text-sky-400"></i>
+                        Langues & Certifications
+                    </h2>
+                    <div class="mb-4">
+                        <h3 class="font-bold mb-2">Langues</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-sky-400/20 text-sky-400 px-3 py-1 rounded-full text-sm">Français</span>
+                            <span class="bg-sky-400/20 text-sky-400 px-3 py-1 rounded-full text-sm">Anglais</span>
+                            <span class="bg-sky-400/20 text-sky-400 px-3 py-1 rounded-full text-sm">Espagnol</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-2">Certifications</h3>
+                        <ul class="text-slate-300 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-certificate text-sky-400 mt-1 mr-2"></i>
+                                <span>Introduction au Dark Web</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-certificate text-sky-400 mt-1 mr-2"></i>
+                                <span>Anonymat et Cryptomonnaie</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-certificate text-sky-400 mt-1 mr-2"></i>
+                                <span>Fortinet NSE Network Security Associate (1,2 & 3)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Experience -->
+                <section class="glass-card p-6 rounded-2xl">
+                    <h2 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-briefcase mr-3 text-sky-400"></i>
+                        Expérience Professionnelle
+                    </h2>
+                    <div class="relative pl-6">
+                        <div class="timeline-dot absolute left-0 top-2"></div>
+                        <div class="mb-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-bold text-lg">Développeur Fullstack</h3>
+                                <span class="text-sky-400 text-sm">Jan 2024 - Oct 2024</span>
+                            </div>
+                            <p class="text-slate-400 text-sm font-semibold mb-2">SOUTRALI DEALS</p>
+                            <ul class="text-slate-300 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-angle-right text-sky-400 mt-1 mr-2"></i>
+                                    <span>Conception de frontend pour diverses applications</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-angle-right text-sky-400 mt-1 mr-2"></i>
+                                    <span>Implémentation de fonctionnalités d'une application d'identification et d'une application E-commerce</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-angle-right text-sky-400 mt-1 mr-2"></i>
+                                    <span>Création d'API REST pour les applications</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects -->
+                <section class="glass-card p-6 rounded-2xl">
+                    <h2 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-code-branch mr-3 text-sky-400"></i>
+                        Projets
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="glass-card p-4 rounded-xl">
+                            <h3 class="font-bold mb-2">Portfolio Personnel</h3>
+                            <p class="text-sm text-slate-400 mb-3">Site web personnel pour présenter mes compétences, mes projets et mon parcours académique.</p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="text-xs bg-orange-400/20 text-orange-400 px-2 py-1 rounded">HTML</span>
+                                <span class="text-xs bg-blue-400/20 text-blue-400 px-2 py-1 rounded">CSS</span>
+                                <span class="text-xs bg-yellow-400/20 text-yellow-400 px-2 py-1 rounded">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl">
+                            <h3 class="font-bold mb-2">Site Web université</h3>
+                            <p class="text-sm text-slate-400 mb-3">Site vitrine pour une université présentant l'école, les programmes de cours et le personnel.</p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="text-xs bg-sky-400/20 text-sky-400 px-2 py-1 rounded">React</span>
+                                <span class="text-xs bg-green-400/20 text-green-400 px-2 py-1 rounded">Node.js</span>
+                                <span class="text-xs bg-red-400/20 text-red-400 px-2 py-1 rounded">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section class="glass-card p-6 rounded-2xl">
+                    <h2 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-tools mr-3 text-sky-400"></i>
+                        Compétences Techniques
+                    </h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="font-bold mb-3">Langages de programmation</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <i class="fab fa-html5 text-5xl text-orange-500 mb-3"></i>
+                                    <h4 class="font-bold">HTML5</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <i class="fab fa-css3-alt text-5xl text-blue-500 mb-3"></i>
+                                    <h4 class="font-bold">CSS3</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <i class="fab fa-js text-5xl text-yellow-400 mb-3"></i>
+                                    <h4 class="font-bold">JavaScript</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/java-14.svg" alt="Java" class="h-12 mx-auto mb-3">
+                                    <h4 class="font-bold">Java</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-3">Frameworks & Bibliothèques</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <i class="fab fa-react text-5xl text-cyan-400 mb-3"></i>
+                                    <h4 class="font-bold">React</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/flutter-logo.svg" alt="Flutter" class="h-12 mx-auto mb-3">
+                                    <h4 class="font-bold">Flutter</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" alt="Tailwind CSS" class="h-12 mx-auto mb-3">
+                                    <h4 class="font-bold">Tailwind</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/vue-9.svg" alt="Vue" class="h-12 mx-auto mb-3">
+                                    <h4 class="font-bold">Vue</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next" class="h-12 mx-auto mb-3 bg-white rounded-full">
+                                    <h4 class="font-bold">Next</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/nuxt-2.svg" alt="Nuxt" class="h-12 mx-auto mb-3">
+                                    <h4 class="font-bold">Nuxt</h4>
+                                </div><div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <i class="fab fa-node-js text-5xl text-green-500 mb-3"></i>
+                                    <h4 class="font-bold">Node.js</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/adonisjs.svg" alt="Adonis" class="h-12 mx-auto mb-3">
+                                    <h4 class="font-bold">Adonis</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-3">Bases de données</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB" class="h-12 mx-auto mb-3">
+                                    <h4 class="font-bold">MongoDB</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://upload.wikimedia.org/wikipedia/fr/6/62/MySQL.svg" alt="MySQL" class="h-12 mx-auto mb-3">
+                                    <h4 class="font-bold">MySQL</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="PostgreSQL" class="h-12 mx-auto mb-3">
+                                    <h4 class="font-bold">PostgreSQL</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/firebase-1.svg" alt="Firebase" class="h-12 mx-auto mb-3">
+                                    <h4 class="font-bold">Firebase</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/sqlite.svg" alt="SQLite" class="h-12 mx-auto mb-3">
+                                    <p class="text-xs mt-1">SQLite</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-3">Outils & Environnements</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <i class="fab fa-git-alt text-5xl text-orange-600 mb-3"></i>
+                                    <h4 class="font-bold">Git</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <i class="fab fa-github text-5xl text-white mb-3"></i>
+                                    <h4 class="font-bold">GitHub</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/figma-icon.svg" alt="Figma" class="h-12 mx-auto mb-3">
+                                    <h4 class="font-bold">Figma</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/postman.svg" alt="Postman" class="h-12 mx-auto mb-3">
+                                    <h4 class="font-bold">Postman</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" alt="Vue" class="h-12 mx-auto mb-3">
+                                    <h4 class="font-bold">VSCode</h4>
+                                </div>
+                                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/tux.svg" alt="Linux" class="h-12 mx-auto mb-3">
+                                    <h4 class="font-bold">Linux</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-sm text-slate-500 mt-8 pt-8 border-t border-slate-800">
+            <p>© 2025 Luc-Emmanuel Koffi. Tous droits réservés.</p>
+        </footer>
+    </div>
+
+    <!-- Print Button -->
+    <a href="portolio.html">
+        <button  class="print-button glass-card hover:bg-slate-800/50 text-white p-3 rounded-full transition duration-300">
+            <i class="fa-solid fa-arrow-left"></i> Portfolio 
+        </button>
+    </a>
+</body>
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luc-Emmanuel Koffi | Junior Fullstack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(2, 8, 24, 0.37);
+        }
+        
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-icon:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #38bdf8;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass-card fixed w-full z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home">
+                        <i class="fa-solid fa-bolt gradient-text text-xl"></i>
+                        <span class="text-xl font-bold text-white">MVN<span class="font-bold text-xl gradient-text ">UEL</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-white px-3 py-2 text-sm font-medium">Accueil</a>
+                        <a href="#about" class="nav-link text-white px-3 py-2 text-sm font-medium">A propos</a>
+                        <a href="#skills" class="nav-link text-white px-3 py-2 text-sm font-medium">Compétences</a>
+                        <a href="#projects" class="nav-link text-white px-3 py-2 text-sm font-medium">Projet</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#contact" class="glass-card hover:bg-slate-800/50 text-white px-6 py-2 rounded-full text-sm font-medium transition duration-300">
+                        Contactez moi !
+                    </a>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-sky-400 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Ouvrir menu</span>
+                        <i class="fas fa-bars" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4 mb-8 justify-center items-center">
+                    <a href="#home" class="nav-link text-white px-3 py-2 text-sm font-medium">Accueil</a>
+                    <a href="#about" class="nav-link text-white px-3 py-2 text-sm font-medium">À propos</a>
+                    <a href="#skills" class="nav-link text-white px-3 py-2 text-sm font-medium">Compétences</a>
+                    <a href="#projects" class="nav-link text-white px-3 py-2 text-sm font-medium">Projets</a>
+                    <div class="md:block">
+                        <a href="#contact" class="glass-card hover:bg-slate-800/50 text-white px-6 py-2 rounded-full text-sm font-medium transition duration-300">
+                            Contactez moi !
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-4 pt-24 pb-12">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Bonjour, je suis <span class="gradient-text">Luc-Emmanuel Koffi</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl mb-6 text-slate-300">
+                    Développeur <span class="gradient-text">Fullstack Junior</span>
+                </h2>
+                <p class="text-lg mb-8 text-slate-400 max-w-lg">
+                    Je construis des expériences digitales exceptionnelles avec les technologies web modernes. 
+                    Passionné par le code propre et les interfaces utilisateur intuitives.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#projects" class="glass-card hover:bg-slate-800/50 text-white px-8 py-3 rounded-full text-lg font-medium transition duration-300">
+                        Voir mon travail
+                    </a>
+                    <a href="cv.html" class="border border-sky-400/30 hover:bg-sky-400/10 text-white px-8 py-3 rounded-full text-lg font-medium transition duration-300">
+                        Voir mon CV
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="glass-card p-2 rounded-full">
+                    <img src="https://mvnuel-dev.netlify.app/assets/profle-CPcw1I8i.jpg" 
+                         alt="Luc-Emmanuel Koffi" 
+                         class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-sky-400/20">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">A mon <span class="gradient-text">sujet</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-sky-400 to-indigo-400 mx-auto"></div>
+            </div>
+            
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">Qui suis-je ?</h3>
+                        <p class="text-slate-300 mb-6">
+                            Je suis un développeur fullstack passionné avec une base solide dans les technologies frontend et backend. 
+                            J'ai récemment obtenu un diplôme en informatique et 
+                            j'ai perfectionné mes compétences à travers des projets personnels et le travail indépendant.
+                        </p>
+                        <p class="text-slate-300 mb-6">
+                            Mon parcours dans le développement informatique a commencé lorsque j'ai créé mon premier jeu 2D à 17 ans à l'aide scracth. 
+                            Depuis, je suis fasciné par les possibilités infinies de créer des expériences numériques à la fois belles et fonctionnelles.
+                        </p>
+                        <p class="text-slate-300">
+                            Quand je ne suis pas en train de coder, vous pouvez me trouver à mille million de pourcent en train de faire du basket ou de la musculation (une véritable passion pour le sport), 
+                            de dessiner, de lire tout livre qui passe entre mes mains ou encore d'expérimenter de nouvelles recettes dans la cuisine.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="glass-card p-6 rounded-xl">
+                                <div class="text-sky-400 text-4xl mb-4">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <h4 class="font-bold mb-2">Frontend</h4>
+                                <p class="text-sm text-slate-400">
+                                    Créer des interfaces réactives et accessibles avec React et CSS moderne.
+                                </p>
+                            </div>
+                            <div class="glass-card p-6 rounded-xl">
+                                <div class="text-indigo-400 text-4xl mb-4">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <h4 class="font-bold mb-2">Backend</h4>
+                                <p class="text-sm text-slate-400">
+                                    Création d'API REST de base et d'interaction avec des bases de données avec Node.js et Express.
+                                </p>
+                            </div>
+                            <div class="glass-card p-6 rounded-xl">
+                                <div class="text-emerald-400 text-4xl mb-4">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h4 class="font-bold mb-2">Mobile</h4>
+                                <p class="text-sm text-slate-400">
+                                    Développer des applications crossplateformes avec React Native(Expo) et Flutter.
+                                </p>
+                            </div>
+                            <div class="glass-card p-6 rounded-xl">
+                                <div class="text-amber-400 text-4xl mb-4">
+                                    <i class="fas fa-pencil-ruler"></i>
+                                </div>
+                                <h4 class="font-bold mb-2">UI/UX</h4>
+                                <p class="text-sm text-slate-400">
+                                    Concevoir des expériences utilisateur intuitives avec Figma ou Adobe XD
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-gradient-to-b from-slate-900/50 to-slate-900/20">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Mes <span class="gradient-text">Compétences</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-sky-400 to-indigo-400 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Frontend Skills -->
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <i class="fab fa-html5 text-5xl text-orange-500 mb-3"></i>
+                    <h4 class="font-bold">HTML5</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <i class="fab fa-css3-alt text-5xl text-blue-500 mb-3"></i>
+                    <h4 class="font-bold">CSS3</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <i class="fab fa-js text-5xl text-yellow-400 mb-3"></i>
+                    <h4 class="font-bold">JavaScript</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/java-14.svg" alt="Java" class="h-12 mx-auto mb-3">
+                    <h4 class="font-bold">Java</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <i class="fab fa-react text-5xl text-cyan-400 mb-3"></i>
+                    <h4 class="font-bold">React</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/flutter-logo.svg" alt="Flutter" class="h-12 mx-auto mb-3">
+                    <h4 class="font-bold">Flutter</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" alt="Tailwind CSS" class="h-12 mx-auto mb-3">
+                    <h4 class="font-bold">Tailwind</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/vue-9.svg" alt="Vue" class="h-12 mx-auto mb-3">
+                    <h4 class="font-bold">Vue</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next" class="h-12 mx-auto mb-3 bg-white rounded-full">
+                    <h4 class="font-bold">Next</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/nuxt-2.svg" alt="Nuxt" class="h-12 mx-auto mb-3">
+                    <h4 class="font-bold">Nuxt</h4>
+                </div>
+                
+                <!-- Backend Skills -->
+                
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB" class="h-12 mx-auto mb-3">
+                    <h4 class="font-bold">MongoDB</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="Django" class="h-12 mx-auto mb-3">
+                    <h4 class="font-bold">Django</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Django" class="h-12 mx-auto mb-3">
+                    <h4 class="font-bold">Python</h4>
+                </div>
+                
+                <!-- Tools -->
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <i class="fab fa-git-alt text-5xl text-orange-600 mb-3"></i>
+                    <h4 class="font-bold">Git</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <i class="fab fa-github text-5xl text-white mb-3"></i>
+                    <h4 class="font-bold">GitHub</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/figma-icon.svg" alt="Figma" class="h-12 mx-auto mb-3">
+                    <h4 class="font-bold">Figma</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/postman.svg" alt="Postman" class="h-12 mx-auto mb-3">
+                    <h4 class="font-bold">Postman</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" alt="Vue" class="h-12 mx-auto mb-3">
+                    <h4 class="font-bold">VSCode</h4>
+                </div>
+                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                    <img src="https://cdn.worldvectorlogo.com/logos/tux.svg" alt="Linux" class="h-12 mx-auto mb-3">
+                    <h4 class="font-bold">Linux</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Mes <span class="gradient-text">Projets</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-sky-400 to-indigo-400 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="glass-card project-card p-6 rounded-2xl transition duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-6 h-48">
+                        <img src="img/3.png" alt="E-commerce Dashboard" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                            <div class="flex space-x-2">
+                                <span class="text-xs bg-orange-400/20 text-orange-400 px-2 py-1 rounded">HTML</span>
+                                <span class="text-xs bg-sky-400/20 text-sky-400 px-2 py-1 rounded">Tailwind</span>
+                                <span class="text-xs bg-yellow-400/20 text-yellow-400 px-2 py-1 rounded">JS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Jarvis</h3>
+                    <p class="text-sm text-slate-400 mb-4">Création d'un site vitrine pour un restaurant fictif afin de présenter le menu et proposer des réservations.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="#" class="text-sm font-medium text-sky-400 hover:text-sky-300 transition duration-300">
+                            <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="glass-card project-card p-6 rounded-2xl transition duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-6 h-48">
+                        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1936&q=80" alt="Task Management App" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                            <div class="flex space-x-2">
+                                <span class="text-xs bg-sky-400/20 text-sky-400 px-2 py-1 rounded">React</span>
+                                <span class="text-xs bg-amber-400/20 text-amber-400 px-2 py-1 rounded">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">TECHDEV</h3>
+                    <p class="text-sm text-slate-400 mb-4">Création d'un site vitrine pour une université présentant l'école, les programmes de cours et le personnel.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="#" class="text-sm font-medium text-sky-400 hover:text-sky-300 transition duration-300">
+                            <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="glass-card project-card p-6 rounded-2xl transition duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-6 h-48">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Social Media Dashboard" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                            <div class="flex space-x-2">
+                                <span class="text-xs bg-sky-400/20 text-sky-400 px-2 py-1 rounded">React</span>
+                                <span class="text-xs bg-green-400/20 text-green-400 px-2 py-1 rounded">GraphQL</span>
+                                <span class="text-xs bg-red-400/20 text-red-400 px-2 py-1 rounded">Apollo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Social Media Dashboard</h3>
+                    <p class="text-sm text-slate-400 mb-4">Analytics dashboard for social media managers with data visualization.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="#" class="text-sm font-medium text-sky-400 hover:text-sky-300 transition duration-300">
+                            <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gradient-to-b from-slate-900/20 to-slate-900/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact <span class="gradient-text">Touch</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-sky-400 to-indigo-400 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Travaillons ensemble !</h3>
+                    <p class="text-slate-300 mb-8">
+                        Je suis actuellement à la recherche de nouvelles opportunités en tant que développeur fullstack junior. 
+                        Que vous ayez une question ou que vous souhaitiez simplement dire bonjour, je ferai de mon mieux pour vous répondre !
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="glass-card p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-lg text-sky-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <p class="opacity-80">luckemmanuel09@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="glass-card p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-lg text-indigo-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Téléphone</h4>
+                                <p class="opacity-80">+225 07 1076-2494</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="glass-card p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-lg text-emerald-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Localisation</h4>
+                                <p class="opacity-80">Abidjan, Cocody</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Suivez-moi sur les réseaux</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/luc-emmanuel-koffi-a32a92301/" class="glass-card hover:bg-slate-800/50 w-12 h-12 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-linkedin-in text-lg"></i>
+                            </a>
+                            <a href="https://github.com/mvnuel9" class="glass-card hover:bg-slate-800/50 w-12 h-12 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-github text-lg"></i>
+                            </a>
+                            <a href="https://www.snapchat.com/add/mvn_uel9?share_id=fWAwUzSFUNE&locale=fr-FR" class="glass-card hover:bg-slate-800/50 w-12 h-12 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-snapchat text-lg"></i>
+                            </a>
+                            <a href="https://codepen.io/mvnuel9" class="glass-card hover:bg-slate-800/50 w-12 h-12 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-codepen text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-6">Envoyez moi un message</h3>
+                    <form
+                        ref="formEl"
+                        action="https://formsubmit.co/luckemmanuel09@gmail.com"
+                        method="POST"
+                        @submit="setTimeout(() => { showModal = true; formEl?.reset(); }, 100)"
+                    >
+                        <input type="hidden" name="_captcha" value="false" />
+                        <input type="hidden" name="_template" value="table" />
+
+                        <div class="mb-4">
+                          <input name="email" type="email" required placeholder="Votre adresse mail"
+                            class="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400" />
+                        </div>
+                        <div class="mb-4">
+                          <input name="subject" type="text" required placeholder="Objet"
+                            class="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400" />
+                        </div>
+                        <div class="mb-6">
+                          <textarea name="message" required rows="4" placeholder="Écrivez ici..."
+                            class="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400"></textarea>
+                        </div>
+                        <button type="submit"
+                          class="w-full bg-gradient-to-r from-sky-400 to-indigo-500 hover:from-sky-500 hover:to-indigo-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                          Envoyer
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900/80 py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold">Luc-Emmanuel<span class="gradient-text">Koffi</span></span>
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#home" class="text-slate-400 hover:text-white transition duration-300">Accueil</a>
+                    <a href="#about" class="text-slate-400 hover:text-white transition duration-300">A propos</a>
+                    <a href="#skills" class="text-slate-400 hover:text-white transition duration-300">Compétences</a>
+                    <a href="#projects" class="text-slate-400 hover:text-white transition duration-300">Projets</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/in/luc-emmanuel-koffi-a32a92301/" class="glass-card hover:bg-slate-800/50 w-12 h-12 rounded-full flex items-center justify-center transition duration-300">
+                        <i class="fab fa-linkedin-in text-lg"></i>
+                    </a>
+                    <a href="https://github.com/mvnuel9" class="glass-card hover:bg-slate-800/50 w-12 h-12 rounded-full flex items-center justify-center transition duration-300">
+                        <i class="fab fa-github text-lg"></i>
+                    </a>
+                    <a href="https://www.snapchat.com/add/mvn_uel9?share_id=fWAwUzSFUNE&locale=fr-FR" class="glass-card hover:bg-slate-800/50 w-12 h-12 rounded-full flex items-center justify-center transition duration-300">
+                        <i class="fab fa-snapchat text-lg"></i>
+                    </a>
+                    <a href="https://codepen.io/mvnuel9" class="glass-card hover:bg-slate-800/50 w-12 h-12 rounded-full flex items-center justify-center transition duration-300">
+                        <i class="fab fa-codepen text-lg"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-500">
+                <p>© 2023 Luc-Emmanuel Koffi. Tout droits réservés.</p>
+                <p class="mt-2">Designer par Luc-Emmanuel Koffi🚀</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuBtn = document.querySelector('[aria-controls="mobile-menu"]');
+            const menuIcon = menuBtn.querySelector('i');
+            const mobileMenu = document.getElementById('mobile-menu');
+        
+            menuBtn.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+        
+                // Toggle icon between bars and xmark
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                } else {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-xmark');
+                }
+            });
+        
+            // Smooth scroll & auto-close menu mobile
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+        
+                    // Fermer menu mobile après clic
+                    if (window.innerWidth < 768) {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('fa-xmark');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                });
+            });
+        });
+    </script>
+        
+</body>
+</html>
