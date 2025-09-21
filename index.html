@@ -65,6 +65,17 @@
             color: transparent;
         }
     </style>
+    <style>
+        .tech-overlay-skill {
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.3s;
+        }
+        .glass-card.tech-icon:hover .tech-overlay-skill {
+          opacity: 1;
+          pointer-events: auto;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -228,98 +239,186 @@
             
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 <!-- Frontend Skills -->
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <i class="fab fa-html5 text-5xl text-orange-500 mb-3"></i>
                     <h4 class="font-bold">HTML5</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">HTML5</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">90%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <i class="fab fa-css3-alt text-5xl text-blue-500 mb-3"></i>
                     <h4 class="font-bold">CSS3</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">CSS3</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">85%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <i class="fab fa-js text-5xl text-yellow-400 mb-3"></i>
                     <h4 class="font-bold">JavaScript</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">JavaScript</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">80%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <img src="https://cdn.worldvectorlogo.com/logos/java-14.svg" alt="Java" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">Java</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">Java</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">70%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <i class="fab fa-react text-5xl text-cyan-400 mb-3"></i>
                     <h4 class="font-bold">React</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">React</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">75%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <img src="https://cdn.worldvectorlogo.com/logos/flutter-logo.svg" alt="Flutter" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">Flutter</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">Flutter</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">65%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" alt="Tailwind CSS" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">Tailwind</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">Tailwind</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">70%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <img src="https://cdn.worldvectorlogo.com/logos/vue-9.svg" alt="Vue" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">Vue</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">Vue</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">60%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next" class="h-12 mx-auto mb-3 bg-white rounded-full">
                     <h4 class="font-bold">Next</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">Next</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">60%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <img src="https://cdn.worldvectorlogo.com/logos/nuxt-2.svg" alt="Nuxt" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">Nuxt</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">Nuxt</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">55%</span>
+                    </div>
                 </div>
                 
                 <!-- Backend Skills -->
                 
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
-                    <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="MongoDB" class="h-12 mx-auto mb-3">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
+                    <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="Node" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">Node</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">Node</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">75%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">MongoDB</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">MongoDB</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">65%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
-                    <img src="./img/supabase-logo.svg" alt="MongoDB" class="h-12 mx-auto mb-3">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
+                    <img src="./img/supabase-logo.svg" alt="Supabase" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">Supabase</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">Supabase</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">60%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
-                    <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="MongoDB" class="h-12 mx-auto mb-3">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
+                    <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="PostgreSQL" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">PostgreSQL</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">PostgreSQL</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">60%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="Django" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">Django</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">Django</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">65%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
-                    <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Django" class="h-12 mx-auto mb-3">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
+                    <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Python" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">Python</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">Python</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">70%</span>
+                    </div>
                 </div>
                 
                 <!-- Tools -->
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <i class="fab fa-git-alt text-5xl text-orange-600 mb-3"></i>
                     <h4 class="font-bold">Git</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">Git</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">80%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <i class="fab fa-github text-5xl text-white mb-3"></i>
                     <h4 class="font-bold">GitHub</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">GitHub</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">80%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <img src="https://cdn.worldvectorlogo.com/logos/figma-icon.svg" alt="Figma" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">Figma</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">Figma</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">75%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <img src="https://cdn.worldvectorlogo.com/logos/postman.svg" alt="Postman" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">Postman</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">Postman</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">60%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
-                    <img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" alt="Vue" class="h-12 mx-auto mb-3">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
+                    <img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" alt="VSCode" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">VSCode</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">VSCode</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">85%</span>
+                    </div>
                 </div>
-                <div class="glass-card tech-icon p-6 rounded-xl text-center">
+                <div class="glass-card tech-icon p-6 rounded-xl text-center relative overflow-hidden">
                     <img src="https://cdn.worldvectorlogo.com/logos/tux.svg" alt="Linux" class="h-12 mx-auto mb-3">
                     <h4 class="font-bold">Linux</h4>
+                    <div class="tech-overlay-skill absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                        <span class="text-lg font-bold text-white mb-1">Linux</span>
+                        <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">60%</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -334,7 +433,7 @@
             </div>
             <!-- Scroll horizontal natif -->
             <div id="slider-projets" class="flex overflow-x-auto gap-8 scroll-smooth pb-4" style="scrollbar-width: thin; -ms-overflow-style: auto;">
-                <div class="glass-card project-card min-w-[320px] max-w-xs p-6 rounded-2xl transition duration-300">
+                <div class="glass-card project-card min-w-[320px] max-w-xs p-6 rounded-2xl transition duration-300 relative overflow-hidden">
                   <div class="relative overflow-hidden rounded-xl mb-6 h-48">
                     <img src="img/3.png" alt="Lucky Deals" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
@@ -342,6 +441,10 @@
                         <span class="text-xs bg-orange-400/20 text-orange-400 px-2 py-1 rounded">VueJS</span>
                         <span class="text-xs bg-sky-400/20 text-sky-400 px-2 py-1 rounded">Django</span>
                       </div>
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                      <h3 class="text-lg font-bold text-white mb-2">Lucky Deals</h3>
+                      <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">Bientôt disponible</span>
                     </div>
                   </div>
                   <h3 class="text-xl font-bold mb-2">Lucky Deals</h3>
@@ -352,7 +455,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="glass-card project-card min-w-[320px] max-w-xs p-6 rounded-2xl transition duration-300">
+                <div class="glass-card project-card min-w-[320px] max-w-xs p-6 rounded-2xl transition duration-300 relative overflow-hidden">
                   <div class="relative overflow-hidden rounded-xl mb-6 h-48">
                     <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1936&q=80" alt="Nzue ba" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
@@ -360,6 +463,10 @@
                         <span class="text-xs bg-sky-400/20 text-sky-400 px-2 py-1 rounded">Flutter</span>
                         <span class="text-xs bg-purple-400/20 text-purple-400 px-2 py-1 rounded">API</span>
                       </div>
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                      <h3 class="text-lg font-bold text-white mb-2">Nzue ba</h3>
+                      <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">Bientôt disponible</span>
                     </div>
                   </div>
                   <h3 class="text-xl font-bold mb-2">Nzue ba</h3>
@@ -370,7 +477,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="glass-card project-card min-w-[320px] max-w-xs p-6 rounded-2xl transition duration-300">
+                <div class="glass-card project-card min-w-[320px] max-w-xs p-6 rounded-2xl transition duration-300 relative overflow-hidden">
                   <div class="relative overflow-hidden rounded-xl mb-6 h-48">
                     <img src="img/2.png" alt="ToDo Dev" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
@@ -378,6 +485,10 @@
                         <span class="text-xs bg-green-400/20 text-sky-400 px-2 py-1 rounded">React</span>
                         <span class="text-xs bg-yellow-400/20 text-yellow-400 px-2 py-1 rounded">NodeJS</span>
                       </div>
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                      <h3 class="text-lg font-bold text-white mb-2">ToDo Dev</h3>
+                      <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">Bientôt disponible</span>
                     </div>
                   </div>
                   <h3 class="text-xl font-bold mb-2">ToDo Dev</h3>
@@ -388,7 +499,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="glass-card project-card min-w-[320px] max-w-xs p-6 rounded-2xl transition duration-300">
+                <div class="glass-card project-card min-w-[320px] max-w-xs p-6 rounded-2xl transition duration-300 relative overflow-hidden">
                   <div class="relative overflow-hidden rounded-xl mb-6 h-48">
                     <img src="img/2.png" alt="YayaMax" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
@@ -396,6 +507,10 @@
                         <span class="text-xs bg-green-400/20 text-sky-400 px-2 py-1 rounded">NuxtJS</span>
                         <span class="text-xs bg-yellow-400/20 text-yellow-400 px-2 py-1 rounded">Django</span>
                       </div>
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm">
+                      <h3 class="text-lg font-bold text-white mb-2">YayaMax</h3>
+                      <span class="text-sm text-sky-300 bg-black/40 px-3 py-1 rounded">Bientôt disponible</span>
                     </div>
                   </div>
                   <h3 class="text-xl font-bold mb-2">YayaMax</h3>
